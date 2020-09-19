@@ -1,4 +1,5 @@
 //Your MapboxGL API Key
+// const key = 'inside secret.js'
 
 // Options for map
 const options = {
@@ -6,7 +7,7 @@ const options = {
   lng: -82,
   zoom: 0,
   style: 'mapbox://styles/mapbox/traffic-night-v2',
-  pitch: 50,
+  // pitch: 50,
 };
 
 // Create an instance of MapboxGL
@@ -17,7 +18,7 @@ let canvas;
 let meteorites;
 let data;
 
-const canvasWidth = 800;
+const canvasWidth = 600;
 const canvasHeight = 600;
 function setup() {
 
@@ -51,7 +52,7 @@ function drawAgain() {
       const cColor = point.cColor;
       const pos = myMap.latLngToPixel(latitude, longitude);
       stroke(cColor);
-      ellipse(pos.x, pos.y, size, size * .75);
+      ellipse(pos.x, pos.y, size, size);
     } catch (error) {
       console.error(error);
       console.log(point)
